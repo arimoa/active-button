@@ -1,0 +1,15 @@
+#container {
+    display: flex;
+}
+.but {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background-color: rgba(71, 74, 74, 0.315);
+    margin: 5px;
+    border: 2px solid black;
+}
+
+.after, .but:hover {
+    background-color: rgba(58, 23, 234, 0.315);
+}
