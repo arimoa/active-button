@@ -1,14 +1,15 @@
-var container=document.getElementById("container");
-        var but=container.getElementsByClassName("but");
-        var demo=document.getElementById("demo");
-        var after=document.getElementsByClassName("after");
-        for (var i=0; i < but.length ; i=i+1) {
-
-            but[i].addEventListener("click", function() {
-                if (after.length>0) {
-                  after[0].classList.remove("after");
-                }
-                this.classList.add("after");
-            } );
-    
-        }
+var btnElement = document.getElementsByClassName("btn");
+var activeClass = document.getElementsByClassName("active");
+var demoElement = document.getElementById("demo");
+for (let i = 0; i < btnElement.length; i++) {
+  btnElement[i].addEventListener("click", (e) => {
+    if (activeClass.length == 0) {
+      e.target.classList.add("active");
+      demoElement.innerHTML = "your selected number is " + e.target.innerHTML;
+    } else {
+      activeClass[0].classList.remove("active");
+      e.target.classList.add("active");
+      demoElement.innerHTML = "your selected number is " + e.target.innerHTML;
+    }
+  });
+}
